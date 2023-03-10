@@ -1,8 +1,7 @@
-# This file was generated based on ".graphqlconfig". Do not edit manually.
-
-#schema {
-#    query: Query
-#}
+schema {
+    query: Query
+#    mutation: Mutation
+}
 
 type Post {
     created_at: String!
@@ -13,10 +12,21 @@ type Post {
 
 type PostsResult {
     errors: [String]
-    post: [Post]
-    success: Boolean
+    posts: [Post]
+    success: Boolean!
+}
+
+type PostResult {
+    errors: [String]
+    post: Post
+    success: Boolean!
 }
 
 type Query {
-    posts: PostsResult
+    getPosts: PostsResult!
+    getPost(id: ID!): PostResult!
 }
+
+#type Mutation {
+#    createPost(created_at: String!, description: String!, id: ID! title: String!): PostResult!
+#}

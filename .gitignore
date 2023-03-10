@@ -3,3 +3,5 @@
 Pipfile.lock
 __pycache__/
 .graphqlconfig
+*.sqlite3
+
