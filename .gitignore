@@ -1,0 +1,5 @@
+.idea
+*.txt
+Pipfile.lock
+__pycache__/
+.graphqlconfig

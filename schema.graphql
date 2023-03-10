@@ -1,0 +1,22 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+#schema {
+#    query: Query
+#}
+
+type Post {
+    created_at: String!
+    description: String!
+    id: ID!
+    title: String!
+}
+
+type PostsResult {
+    errors: [String]
+    post: [Post]
+    success: Boolean
+}
+
+type Query {
+    posts: PostsResult
+}
