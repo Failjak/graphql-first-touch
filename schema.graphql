@@ -1,6 +1,6 @@
 schema {
     query: Query
-#    mutation: Mutation
+    mutation: Mutation
 }
 
 type Post {
@@ -27,6 +27,6 @@ type Query {
     getPost(id: ID!): PostResult!
 }
 
-#type Mutation {
-#    createPost(created_at: String!, description: String!, id: ID! title: String!): PostResult!
-#}
+type Mutation {
+    createPost(title: String!, description: String!, created_at: String): PostResult!
+}

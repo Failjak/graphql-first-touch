@@ -11,6 +11,10 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+with app.app_context():
+    from .models import *
+    db.create_all()
+
 
 @app.route('/')
 def hello():
